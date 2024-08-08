@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Google Meet Attendance Marker",
+    "version": "1.0",
+    "description": "Lists down the names of people joined in a Google Meet",
+    "permissions": [
+      "activeTab",
+      "https://meet.google.com/*"
+    ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://meet.google.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
