@@ -1,10 +1,12 @@
 {
     "manifest_version": 2,
-    "name": "Google Meet Attendance Marker",
-    "version": "1.0",
-    "description": "Lists down the names of people joined in a Google Meet",
+    "name": "Google Meet Attendance Tracker",
+    "version": "1.1",
+    "description": "Tracks attendees in a Google Meet and allows downloading the list as JSON",
     "permissions": [
       "activeTab",
+      "storage",
+      "downloads",
       "https://meet.google.com/*"
     ],
     "browser_action": {
@@ -15,5 +17,9 @@
         "matches": ["https://meet.google.com/*"],
         "js": ["content.js"]
       }
-    ]
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
   }
